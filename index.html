@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rj Salamanca</title>
+        <link rel='stylesheet' href='css/reset.css'>
+        <link rel='stylesheet' href='css/styles.css'>
+    </head>
+    <body>
+        <main class='main main--styles'>
+            <header>
+                <nav class='nav'>
+                    <ul class='nav__list nav--margin'>
+                        <li class='nav--play'>PLAY</li>
+                        <li><span class='draw--circle'></span>HOME</li>
+                        <li><span class='nav--current draw--circle'></span>ABOUT</li>
+                        <li><span class='draw--circle'></span>PORTFOLIO</li>
+                        <li><span class='draw--circle'></span>CONTACT</li>
+                    </ul>
+                </nav>
+            </header>
+            <div class='about'>
+                <!-- Left Side -->
+                <div class='about__info'>
+                    <p class='about__info-paragraph about--info-padding'>
+                        Lorizzle ipsizzle break it down boom shackalack shizzle my nizzle crocodizzle, consectetuer adipiscing crunk. Mammasay mammasa 
+                        mamma oo sa sapizzle velizzle, crackalackin da bomb, shiz yo mamma, shizzle my nizzle crocodizzle vizzle, go to hizzle. Pellentesque 
+                        ghetto tortor. Pot erizzle. Own yo' pimpin' dolizzle dapibus turpis yo tempor. Mauris fo shizzle yo mamma izzle turpizzle. 
+                        Vestibulum bizzle tortor. Uhuh ... yih! shit rhoncizzle dope. In hac habitasse platea dictumst. Brizzle dapibizzle. Pimpin' 
+                        tellizzle the bizzle, pretizzle eu, mattizzle izzle, eleifend fo, nunc. suscipit. Integizzle sempizzle velit sizzle check out this.
+                    <p>
+                    <h2 class='ability__header ability--header-size'>SPECIAL ABILITY:</h2>
+                    <div class='ability__info ability--info-color-size'>Doin stuff</div>
+                    <div class='bar bar--styles'><span class='bar__percentage bar--percentage-styles'></span></div>
+                    <div class='time__date-container time--date-size'>
+                        <div id='time-container'></div>
+                        <div id='date-container'></div>
+                        <script>
+                            var currentdate = new Date(); 
+
+                            // Get hours and minutes by normal time
+                            var hours = currentdate.getHours();
+                            var minutes = currentdate.getMinutes();
+                            var ampm = hours >= 12 ? 'PM' : 'AM';
+                            hours = hours % 12;
+                            hours = hours ? hours : 12; // the hour '0' should be '12'
+                            minutes = minutes < 10 ? '0'+minutes : minutes;
+                            var strTime = hours + ':  ' + minutes + ' ' + ampm;
+
+                            // Get date by month
+                            var date = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEPT','OCT','NOV','DEC'];
+                            var datetime = date[currentdate.getMonth()] + ' ' + currentdate.getDate() + ' ' + currentdate.getFullYear();
+                            
+                            document.getElementById("time-container").innerHTML = strTime;
+                            document.getElementById("date-container").innerHTML = datetime;
+                        </script>
+                    </div>
+                </div>
+                <!-- Middle -->
+                <div class='image__container'>
+                    <figure>
+                        <img src="images/bitmoji_rj.png" class="image--align"/>
+                        <figcaption class="name name--font">RONITO</figcaption>
+                    </figure>
+                </div>
+                <!-- Right Side -->
+                <div class='skills__container skills--container-padding'>
+                    <h2 class='skills__header skills--header-large'>SKILLS</h2>
+                    <ul class='skills__name-container'>
+                        <li class='skill__name skill--name-color'>HTML</li>
+                        <li>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='empty'></span>
+                        </li>
+                        <li class='skill__name skill--name-color'>CSS</li>
+                        <li>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='empty'></span>
+                            <span class='empty'></span>
+                        </li>
+                        <li class='skill__name skill--name-color'>JAVASCRIPT</li>
+                        <li>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='empty'></span>
+                        </li>
+                        <li class='skill__name skill--name-color'>PYTHON</li>
+                        <li>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='empty'></span>
+                            <span class='empty'></span>
+                            <span class='empty'></span>
+                            <span class='empty'></span>
+                        </li>
+                        <li class='skill__name skill--name-color'>REACT</li>
+                        <li>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='star'></span>
+                            <span class='empty'></span>
+                            <span class='empty'></span>
+                            <span class='empty'></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
